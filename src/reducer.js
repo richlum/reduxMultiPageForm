@@ -1,8 +1,9 @@
 import { combineReducers } from 'redux'
 import { reducer as reduxFormReducer } from 'redux-form'
 
-const reducer = combineReducers({
-  form: reduxFormReducer
-})
+
+let reduxFormAction = () => {form: reduxFormReducer }
+
+const reducer = combineReducers(reduxFormAction)
 
 export default reducer

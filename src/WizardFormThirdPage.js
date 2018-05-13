@@ -1,6 +1,6 @@
 import React from 'react'
 import { Field, reduxForm } from 'redux-form'
-import validate3 from './validate'
+import {validate3} from './validate'
 const colors = ['Red', 'Orange', 'Yellow', 'Green', 'Blue', 'Indigo', 'Violet']
 
 const renderColorSelector = ({ input, meta: { touched, error } }) => (

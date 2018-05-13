@@ -20,8 +20,12 @@
 //   return errors
 // }
 
+//these validations are hit on a per keystroke basis
+// we might want to use this for checkboxes and radio buttons
 
+// validate: (values,props) => errors 
 const validate1 = values => {
+  console.log('validate: ', JSON.stringify(values))
   const errors = {}
   if (!values.firstName) {
     errors.firstName = 'Required'
@@ -68,4 +72,4 @@ const validate3 = values => {
     
 
 */
-export default {validate1,validate2,validate3}
+export  {validate1,validate2,validate3}

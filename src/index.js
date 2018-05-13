@@ -16,7 +16,6 @@ window.store = store
 
 const showResults = values =>   /* standin for axios network call */
   new Promise(resolve => {
-    console.log( 'showResults called ')
     setTimeout(() => {
       window.alert(`You submitted:\n\n${JSON.stringify(values, null, 2)}`)
       resolve()

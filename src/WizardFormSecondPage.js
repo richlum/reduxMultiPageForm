@@ -1,6 +1,6 @@
 import React from 'react'
 import { Field, reduxForm } from 'redux-form'
-import validate2 from './validate'
+import {validate2} from './validate'
 import renderField from './renderField'
 
 const renderError = ({ meta: { touched, error } }) =>
