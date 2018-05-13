@@ -1,6 +1,6 @@
 import React from 'react'
 import { Field, reduxForm } from 'redux-form'
-import validate from './validate'
+import validate3 from './validate'
 const colors = ['Red', 'Orange', 'Yellow', 'Green', 'Blue', 'Indigo', 'Violet']
 
 const renderColorSelector = ({ input, meta: { touched, error } }) => (
@@ -54,8 +54,8 @@ const WizardFormThirdPage = props => {
   )
 }
 export default reduxForm({
-  form: 'reformed',                //Form name is same
+  form: 'reformed_03',                //Form name is same
   destroyOnUnmount: false,
   forceUnregisterOnUnmount: true, // <------ unregister fields on unmount
-  validate
+  validate3
 })(WizardFormThirdPage)

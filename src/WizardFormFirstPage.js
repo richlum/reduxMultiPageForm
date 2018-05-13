@@ -1,9 +1,10 @@
 import React from 'react'
 import { Field, reduxForm } from 'redux-form'
-import validate from './validate'
+import validate1 from './validate'
 import renderField from './renderField'
 
 const WizardFormFirstPage = props => {
+
   const { handleSubmit } = props
   return (
     <form onSubmit={handleSubmit}>
@@ -29,8 +30,8 @@ const WizardFormFirstPage = props => {
 }
 
 export default reduxForm({
-  form: 'reformed',                 // <------ same form name -> this is the store
+  form: 'reformed_01',                 // <------ same form name -> this is the store
   destroyOnUnmount: false,        // <------ preserve form data
   forceUnregisterOnUnmount: true, // <------ unregister fields on unmount
-  validate
+  validate1
 })(WizardFormFirstPage)

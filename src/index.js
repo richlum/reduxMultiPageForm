@@ -1,18 +1,22 @@
 import React from 'react'
 import ReactDOM from 'react-dom'
 import { Provider } from 'react-redux'
-import { createStore, combineReducers } from 'redux'
-import { reducer as reduxFormReducer } from 'redux-form'
+//import { createStore, combineReducers } from 'redux'
+// import { reducer as reduxFormReducer } from 'redux-form'
+import storeFactory from'./store'
 
 const dest = document.getElementById('content')
-const reducer = combineReducers({
-  form: reduxFormReducer // mounted under "form"
-})
-const store = createStore(reducer)
+// const reducer = combineReducers({
+//   form: reduxFormReducer // mounted under "form"
+// })
+// const store = createStore(reducer)
+// window.store = store
+const store = storeFactory()
 window.store = store
 
 const showResults = values =>   /* standin for axios network call */
   new Promise(resolve => {
+    console.log( 'showResults called ')
     setTimeout(() => {
       window.alert(`You submitted:\n\n${JSON.stringify(values, null, 2)}`)
       resolve()

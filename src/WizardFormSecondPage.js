@@ -1,6 +1,6 @@
 import React from 'react'
 import { Field, reduxForm } from 'redux-form'
-import validate from './validate'
+import validate2 from './validate'
 import renderField from './renderField'
 
 const renderError = ({ meta: { touched, error } }) =>
@@ -48,8 +48,13 @@ const WizardFormSecondPage = props => {
 }
 
 export default reduxForm({
-  form: 'reformed',                //Form name is same
+  form: 'reformed_02',                // store.key 
+  // asyncBlurFields: [ 'fldname1' ]  - fields to trigger asycnValidate
+  // asyncValidate: (values, dispatch,  props) => promise
+  // initialValues: { fn: fv, }
+  // onsubmit : func
+  // return ReuectedSubmitPromise
   destroyOnUnmount: false,
   forceUnregisterOnUnmount: true, // <------ unregister fields on unmount
-  validate
+  validate2   // sychronouse validation functions
 })(WizardFormSecondPage)
